@@ -16,21 +16,29 @@
     arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;" id="scene" embedded gesture-detector>
     <a-assets>
       <a-asset-item id="animated-asset" src="assets/asset.glb"></a-asset-item>
+
     </a-assets>
 
-    <a-text>
-      What is Lorem Ipsum?
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-      standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-      type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-      remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-      Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-      of Lorem Ipsum.
-    </a-text>
+
     <a-marker id="animated-marker" type="pattern" preset="custom" url="assets/marker.patt"
       raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;" id="markerA">
       <a-entity id="bowser-model" scale="1.2395944393304796 1.2395944393304796 1.2395944393304796"
-        animation-mixer="loop: repeat" gltf-model="#animated-asset" class="clickable" gesture-handler></a-entity>
+        animation-mixer="loop: repeat" gltf-model="#animated-asset" class="clickable" gesture-handler>
+        <a-text>
+          What is Lorem Ipsum?
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+          standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+          make
+          a
+          type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+          containing
+          Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
+          versions
+          of Lorem Ipsum.
+        </a-text>
+      </a-entity>
+
     </a-marker>
 
     <a-entity camera></a-entity>
