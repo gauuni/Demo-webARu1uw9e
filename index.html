@@ -26,6 +26,12 @@
         animation-mixer="loop: repeat" gltf-model="#animated-asset" class="clickable" gesture-handler>
 
       </a-entity>
+
+      <!-- Text box background (semi-transparent plane with blur) -->
+      <a-plane position="0 -0.2 0" width="1.5" height="0.5" material="color: white; opacity: 0.7"
+        class="blur-background"
+        animation__slide="property: position; from: 0 -0.7 0; to: 0 -0.2 0; dur: 1000; easing: easeOutQuad; startEvents: markerFound"></a-plane>
+      <!-- Text on top of the plane -->
       <a-text value="What is Lorem Ipsum?
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
           standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
@@ -36,7 +42,8 @@
           containing
           Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
           versions
-          of Lorem Ipsum." color="white" position="0.8 0.5 0" align="center" scale="0.5 0.5 0.5"></a-text>
+          of Lorem Ipsum." color="black" position="0 -0.2 0.01" align="center" scale="0.4 0.4 0.4"
+        animation__slide="property: position; from: 0 -0.7 0.01; to: 0 -0.2 0.01; dur: 1000; easing: easeOutQuad; startEvents: markerFound"></a-text>
     </a-marker>
 
     <a-entity camera></a-entity>
